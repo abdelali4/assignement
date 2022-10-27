@@ -1,13 +1,17 @@
-package ma.octo.assignement.exceptions;
+package ma.octo.assignement.Operations.utilis;
 
-public class SoldeDisponibleInsuffisantException extends Exception {
+public class SoldeDisponibleInsuffisantException extends  Exception{
 
-  private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1;
 
-  public SoldeDisponibleInsuffisantException() {
-  }
+    private static String message =  "";
 
-  public SoldeDisponibleInsuffisantException(String message) {
-    super(message);
-  }
+    public SoldeDisponibleInsuffisantException(){
+        super(message);
+    }
+
+    public SoldeDisponibleInsuffisantException(String m){
+        super(m);
+    }
+
 }

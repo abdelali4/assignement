@@ -1,64 +1,34 @@
-package ma.octo.assignement.domain;
+package ma.octo.assignement.Compte;
+
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import ma.octo.assignement.Utilisateur.Utilisateur;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
 @Table(name = "COMPTE")
+@Data
+@AllArgsConstructor @NoArgsConstructor
 public class Compte {
-  @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  private Long id;
 
-  @Column(length = 16, unique = true)
-  private String nrCompte;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
-  private String rib;
+    @Column(length = 16, unique = true)
+    private String nrCompte;
 
-  @Column(precision = 16, scale = 2)
-  private BigDecimal solde;
+    private String rib;
 
-  @ManyToOne()
-  @JoinColumn(name = "utilisateur_id")
-  private Utilisateur utilisateur;
+    @Column(precision = 16, scale = 2)
+    private BigDecimal solde;
 
-  public String getNrCompte() {
-    return nrCompte;
-  }
+    @ManyToOne()
+    @JoinColumn(name = "utilisateur_id")
+    private Utilisateur utilisateur;
 
-  public void setNrCompte(String nrCompte) {
-    this.nrCompte = nrCompte;
-  }
-
-  public String getRib() {
-    return rib;
-  }
-
-  public void setRib(String rib) {
-    this.rib = rib;
-  }
-
-  public BigDecimal getSolde() {
-    return solde;
-  }
-
-  public void setSolde(BigDecimal solde) {
-    this.solde = solde;
-  }
-
-  public Utilisateur getUtilisateur() {
-    return utilisateur;
-  }
-
-  public void setUtilisateur(Utilisateur utilisateur) {
-    this.utilisateur = utilisateur;
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
-  }
 }

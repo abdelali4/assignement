@@ -1,4 +1,4 @@
-package ma.octo.assignement.repository;
+package ma.octo.assignement.Operations.Transfer;
 
 import ma.octo.assignement.domain.Transfer;
 import org.springframework.data.jpa.repository.JpaRepository;

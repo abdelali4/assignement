@@ -1,13 +1,15 @@
-package ma.octo.assignement.exceptions;
+package ma.octo.assignement.Compte.utilis;
 
-public class CompteNonExistantException extends Exception {
+public class CompteNonExistantException  extends  Exception{
 
-  private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1;
 
-  public CompteNonExistantException() {
-  }
+    private static String message =  "Compte Non existant";
 
-  public CompteNonExistantException(String message) {
-    super(message);
-  }
+    public CompteNonExistantException(){
+        super(message);
+    }
+    public CompteNonExistantException(String m){
+        super(m);
+    }
 }
